@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react'
 import htmlToElement from './htmlToElement'
+import ScalableText from 'react-native-text'
 import {
   Linking,
   StyleSheet,
-  Text,
 } from 'react-native'
 
 const boldStyle = {fontWeight: '500'}
@@ -70,9 +70,9 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <ScalableText children={this.state.element} />
     }
-    return <Text />
+    return <ScalableText />
   }
 }
 
