@@ -1,6 +1,5 @@
 var React = require('react')
 var ReactNative = require('react-native')
-var ScalableText = require('react-native-text')
 var htmlparser = require('htmlparser2-without-node-native')
 var entities = require('entities')
 
@@ -27,9 +26,9 @@ function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <ScalableText key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
             {entities.decodeHTML(node.data)}
-          </ScalableText>
+          </Text>
         )
       }
 
