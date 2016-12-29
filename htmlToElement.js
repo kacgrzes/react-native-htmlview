@@ -26,7 +26,6 @@ function htmlToElement(rawHtml, opts, done) {
 
 
       if (node.type == 'text') {
-        node.data = node.data.replace(/(?:\r\n|\r|\n)/g, '&nbsp');
         return (
           <Text key={index} style={parent ? opts.styles[parent.name] : null}>
             {entities.decodeHTML(node.data)}
